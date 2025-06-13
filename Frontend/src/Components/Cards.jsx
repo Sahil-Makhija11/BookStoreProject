@@ -3,8 +3,8 @@ import React from 'react'
 function Cards({ item }) {
   return (
    <>
-   <div  className="flex justify-center items-center p-4 mt-4">
-    <div className="card bg-base-100 w-96 shadow-xl">
+   <div  className="  flex flex-wrap justify-center items-stretch gap-4 ">
+    <div className="card bg-base-100 w-96 shadow-xl h-full flex flex-col justify-between hover:scale-105 duration-200">
   <figure>
     <img
       src={item.image}
@@ -12,7 +12,7 @@ function Cards({ item }) {
   </figure>
   <div className="card-body">
     <h2 className="card-title">
-      {item.name}
+      {item.name} 
       <div className="badge badge-secondary">{item.category}</div>
     </h2>
     <p>{item.title}</p>

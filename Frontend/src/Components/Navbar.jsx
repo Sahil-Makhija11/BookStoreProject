@@ -1,6 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useState } from 'react';
 
 const Navbar = () => {
+
+const [theme, setTheme] = useState(localStorage.getItem('theme')? localStorage.getItem('theme'): 'light');
+
     const navItems = (
         <>
         <li><a href='/'>Home</a></li>
