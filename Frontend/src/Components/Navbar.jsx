@@ -3,8 +3,8 @@ import React from 'react'
 const Navbar = () => {
     const navItems = (
         <>
-        <li><a>Home</a></li>
-      <li><a>Course</a></li>
+        <li><a href='/'>Home</a></li>
+      <li><a href='/Course'>Course</a></li>
       <li><a>Contact</a></li>
       <li><a>About</a></li>     
         </>
@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-    <div className=' max-w-screen-2xl container mx-auto md:px-5 px-4 fixed top-0 left-0 right-0'>
+    <div className=' max-w-screen-2xl container mx-auto md:px-5 px-4 fixed top-0 left-0 right-0 z-50'>
       <div className="navbar bg-base-100 shadow-sm">
   <div className="navbar-start">
     <div className="dropdown">

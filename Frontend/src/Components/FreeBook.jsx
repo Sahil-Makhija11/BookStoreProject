@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 import list from '../../public/list.json'
+import Cards from './Cards';
 
 function FreeBook() {
     const filterData=list.filter((data)=> data.category === "free");
@@ -12,8 +13,8 @@ function FreeBook() {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     initialSlide: 0,
     responsive: [
       {
@@ -46,39 +47,20 @@ function FreeBook() {
   return (
     <>
     <div className='max-w-screen-2xl container mx-auto md:px-0 px-4'>
+      <div>
      <h1 className='font-bold text-xl pb-2'>Free offered Courses</h1> 
      <p>Dive into our collection of free eBooks, classics, and exclusive previews. <br />
-        No hidden fees, no subscriptions – just great books waiting to be read. <br />
+        No hidden fees, no subscriptions. just great books waiting to be read. <br />
         Perfect for budget-savvy book lovers!</p>
-    </div>
-
+    
+</div>
     <div>
       <Slider {...settings}>
-        <div>
-          <h3>1</h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-        <div>
-          <h3>7</h3>
-        </div>
-        <div>
-          <h3>8</h3>
-        </div>
+        {filterData.map((item)=>(
+          <Cards item={item} key={item.id}/>
+        ))}
       </Slider>
+    </div>
     </div>
   </>
   )
