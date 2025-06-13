@@ -12,10 +12,12 @@ function App() {
     <>     
      {/* <Home/>
      <Course/> */}
+     <div >
      <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/course" element={<Courses />} />
      </Routes>
+     </div>
     </>
   );
 }
