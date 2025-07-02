@@ -26,7 +26,7 @@ function Login() {
           setTimeout(() => {
               window.location.reload(); // Redirect to home page after login
           localStorage.setItem("User", JSON.stringify(res.data.user));
-          }, 3000);
+          }, 1000);
         }
         
 
@@ -35,7 +35,7 @@ function Login() {
         if (err.response) {
           console.log(err.response.data.message);
           toast.error('Error: ' + err.response.data.message);
-          setTimeout(() => {}, 3000);
+          setTimeout(() => {}, 2000);
         }
       });
   };

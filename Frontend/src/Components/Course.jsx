@@ -28,8 +28,11 @@ function Course() {
         We're delighted to have you <span className='text-blue-500'> here!</span>
     </h1>
     <p className='mt-12'>
-        Unlock the full experience with the paid version! Get access to exclusive bonus chapters, in-depth author insights, ad-free reading,<br />
-        and high-quality downloadable formats. Your support helps create more great content—upgrade today!
+        Welcome to your personalized book haven! Here, you’ll find all your purchased titles neatly organized for easy access.
+         Revisit your favorite reads or dive into new ones anytime. 
+         Your literary journey continues here—convenient, curated, and always at your fingertips. 
+         <br /><span className='text-blue-500'> Thank you for being a valued reader with us!</span>
+
     </p>
     <Link to='/'>
     <button className='mt-8 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer'>

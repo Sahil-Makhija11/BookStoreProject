@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { use } from 'react'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import Login from './Login'
 import { useForm } from "react-hook-form"
 import axios from 'axios'
@@ -7,6 +7,10 @@ import toast from 'react-hot-toast'
 
 
 function Signup() {
+  const location= useLocation()
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || '/';
+
 const {
     register,
     handleSubmit,
@@ -23,9 +27,8 @@ const {
       .then((res) => {
       console.log(res.data)
       if (res.data) {
-       
         toast.success('Signedup successfully!');
-        
+        navigate(from, { replace: true });
       }
       localStorage.setItem("User", JSON.stringify(res.data.user));
   }).catch((err) => {
@@ -91,17 +94,19 @@ const {
     <button className='mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-slate-800 duration-300 cursor-pointer'>
         Signup   
     </button>   
-    <p className='mt-3 text-md'>Allready Joined? {" "}
-    <button  className='underline text-blue-400 cursor-pointer ' 
-    onClick={() => 
-    document.getElementById('my_modal_3').showModal()}>
+   <div className='mt-3 text-md'>
+  Allready Joined?{" "}
+  <button className='underline text-blue-400 cursor-pointer' 
+    onClick={() => document.getElementById('my_modal_3').showModal()}>
     Login
-    </button>
-    {" "}
-    <Login />
-    </p> 
+  </button>
+  {" "}
+ 
+</div>
+
     </div>  
-     </form>    
+     </form> 
+      <Login />   
   </div>
 </div>
     </div>

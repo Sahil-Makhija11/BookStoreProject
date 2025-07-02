@@ -6,8 +6,8 @@ function Banner() {
         <div className='w-full order-2 md:order-1 md:w-1/2 mt-12 md:mt-32'>
         <div className='space-y-12'>
         <h1 className='text-4xl font-bold'>Great reads, <span className='text-blue-500'> one click away.</span></h1>
-        <p className='text-xl' >Welcome to your personal bookspace—where stories live, ideas thrive, <br />
-                    and every shelf has something just for you. Whether it's fiction, facts, <br />
+        <p className='text-xl' >Welcome to your personal bookspace—where stories live, <br />ideas thrive, 
+                    and every shelf has something just for you.<br /> Whether it's fiction, facts, 
                     or  something in between, we're glad you're here.</p>
       
               <div className="join">
@@ -35,7 +35,7 @@ function Banner() {
        </div>
         </div>
         <div className='order-1 w-full md:w-1/2'>
-        <img src="/Banner.jpg" alt="banner" className='w-150 h-105' />
+        <img src="/Banner1.jpg" alt="banner" className='w-150 h-105' />
         </div>
       </div>
     </>
