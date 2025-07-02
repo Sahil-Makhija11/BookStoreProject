@@ -69,7 +69,7 @@ function Navbar  () {
       <path d="m21 21-4.3-4.3"></path>
     </g>
   </svg>
-  <input type="search" className='grow outline-none ' required placeholder="Search" />
+  {/* <input type="search" className='grow outline-none ' required placeholder="Search" /> */}
 </label>
 </div>
 {/* <label className="toggle text-base-content">
